@@ -15,8 +15,6 @@ def preprocess_img(filename):
     width = int(gray.shape[1] * scale_percent / 100)
     height = int(gray.shape[0] * scale_percent / 100)
     dim = (width, height)
-
-    # resize image
     resized = cv2.resize(gray, dim, interpolation = cv2.INTER_AREA)
 
     return resized
